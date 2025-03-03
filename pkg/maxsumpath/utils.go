@@ -20,7 +20,7 @@ func FetchTriangleData(url string) ([][]int, error) {
 		return nil, fmt.Errorf("failed to read response body: %w", err)
 	}
 
-	// I try too get it from github but
+	// I try to get it from github but
 	// cause of Error parsing JSON:invalid character '<' looking for beginning of value T^T
 	var data [][]int
 	if err := json.Unmarshal(body, &data); err != nil {
